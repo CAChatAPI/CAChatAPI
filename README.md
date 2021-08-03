@@ -2,13 +2,18 @@ The github of the CA chat api.
 
 
 ```python
-from CAC import ChatRoom, InitializeUser
+from CAC import ChatApp
 
-cr = ChatRoom("code from website")
-user = InitializeUser(input("Name: "))
+APP_ID = "MY_APP"
+ROOM_ID = "MY_ROOM"
+USER_NAME = "DEV"
 
-print("latest: " + cr.gm())
-print("yours: " + cr.pm(user, "hi!"))
+app = ChatApp(APP_ID)
+room = app.ChatRoom(ROOM_ID)
+
+print("latest: " + room.gm())
+print("yours: " + room.pm(USER_NAME, "hi!"))
+print("all: " + room.gam())
 ```
 <!---
 CAChatAPI/CAChatAPI is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
